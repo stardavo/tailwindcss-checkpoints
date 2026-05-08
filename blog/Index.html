@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Africa Tech Infos — Your African Technology Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+      html { scroll-behavior: smooth; }
+      .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 28px -6px rgba(0,0,0,0.13); }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- ===== HEADER ===== -->
+    <header class="sticky top-0 z-50 bg-emerald-900 shadow-lg">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-amber-400 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-bolt text-emerald-900 text-lg"></i>
+          </div>
+          <div class="leading-tight">
+            <span class="text-white font-extrabold text-lg block leading-none">Africa Tech</span>
+            <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">Infos</span>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors duration-200">Home</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors duration-200">Tech</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors duration-200">Startups</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors duration-200">Innovation</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors duration-200">About</a>
+        </nav>
+
+        <!-- Subscribe CTA + mobile toggle -->
+        <div class="flex items-center gap-4">
+          <a
+            href="#newsletter"
+            class="hidden sm:block bg-amber-400 hover:bg-amber-300 text-emerald-900 font-bold text-sm px-5 py-2 rounded-full transition-colors duration-200"
+          >
+            Subscribe
+          </a>
+          <label for="nav-toggle" class="md:hidden cursor-pointer text-white hover:text-amber-400 transition-colors">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </label>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <input type="checkbox" id="nav-toggle" class="hidden peer" />
+      <div class="hidden peer-checked:block md:hidden bg-emerald-800 border-t border-emerald-700 px-6 py-5">
+        <nav class="flex flex-col gap-4">
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors">Home</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors">Tech</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors">Startups</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors">Innovation</a>
+          <a href="#" class="text-emerald-100 hover:text-amber-400 text-sm font-medium transition-colors">About</a>
+          <a href="#newsletter" class="bg-amber-400 hover:bg-amber-300 text-emerald-900 font-bold text-sm px-5 py-2.5 rounded-full text-center transition-colors">
+            Subscribe Free
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ===== FEATURED POSTS ===== -->
+      <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+
+          <div class="flex items-end justify-between mb-10">
+            <div>
+              <p class="text-emerald-600 font-semibold text-sm uppercase tracking-widest mb-1">Editor's Picks</p>
+              <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Featured Stories</h2>
+            </div>
+            <a href="#" class="hidden sm:flex items-center gap-2 text-emerald-600 hover:text-emerald-800 text-sm font-semibold transition-colors">
+              View all <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Main featured card -->
+            <article class="card-hover lg:col-span-2 rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm flex flex-col">
+              <div class="relative h-64 md:h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80"
+                  alt="Lagos Tech Hub"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                <span class="absolute top-4 left-4 bg-amber-400 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                  Featured
+                </span>
+              </div>
+              <div class="p-7 flex flex-col flex-1">
+                <span class="text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-3">
+                  Startups &middot; 8 min read
+                </span>
+                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-3 leading-snug hover:text-emerald-700 transition-colors cursor-pointer">
+                  Lagos Tech Hub: How the Silicon Savanna is Reshaping African Innovation
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-1">
+                  From Yaba to the world — Lagos has quietly become one of the most vibrant tech ecosystems on the planet. We take a deep dive into the startups, investors, and builders turning Nigeria's megacity into a global powerhouse.
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-sm flex-shrink-0">AO</div>
+                    <div>
+                      <p class="text-slate-700 text-xs font-semibold">Amara Osei</p>
+                      <p class="text-slate-400 text-xs">May 5, 2026</p>
+                    </div>
+                  </div>
+                  <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                    Read more <i class="fa-solid fa-arrow-right text-xs"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Side featured cards -->
+            <div class="flex flex-col gap-8">
+
+              <article class="card-hover rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm flex flex-col">
+                <div class="relative h-44 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80"
+                    alt="Mobile Payments in Africa"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase">
+                    Fintech
+                  </span>
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <span class="text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-2">Finance &middot; 5 min read</span>
+                  <h3 class="text-base font-bold text-slate-900 mb-2 leading-snug hover:text-emerald-700 transition-colors cursor-pointer">
+                    M-Pesa at 20: How Mobile Money Transformed an Entire Continent
+                  </h3>
+                  <p class="text-slate-500 text-xs leading-relaxed mb-4 flex-1">
+                    Two decades after its launch in Kenya, M-Pesa's blueprint has inspired hundreds of fintech solutions across Africa's 54 nations.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 28, 2026</p>
+                    <a href="#" class="text-emerald-600 hover:text-emerald-800 text-xs font-semibold flex items-center gap-1 transition-colors">
+                      Read <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-hover rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm flex flex-col">
+                <div class="relative h-44 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80"
+                    alt="AI in Africa"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute top-3 left-3 bg-violet-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase">
+                    AI
+                  </span>
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <span class="text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-2">Artificial Intelligence &middot; 6 min read</span>
+                  <h3 class="text-base font-bold text-slate-900 mb-2 leading-snug hover:text-emerald-700 transition-colors cursor-pointer">
+                    AI-Powered Agriculture: How Machine Learning is Feeding Africa's Future
+                  </h3>
+                  <p class="text-slate-500 text-xs leading-relaxed mb-4 flex-1">
+                    Startups across East Africa are deploying AI to predict yields, fight crop disease, and connect smallholder farmers to global markets.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 20, 2026</p>
+                    <a href="#" class="text-emerald-600 hover:text-emerald-800 text-xs font-semibold flex items-center gap-1 transition-colors">
+                      Read <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CATEGORIES ===== -->
+      <section class="py-14 px-6 bg-emerald-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-8">
+            <p class="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-2">Browse by Topic</p>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white">Explore Categories</h2>
+          </div>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#" class="bg-amber-400 hover:bg-amber-300 text-emerald-900 font-bold text-sm px-5 py-2.5 rounded-full transition-colors duration-200">🔥 Trending</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🤖 Artificial Intelligence</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">💳 Fintech</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🚀 Startups</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">📱 Mobile &amp; Apps</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">☀️ CleanTech</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🛒 E-Commerce</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🔒 Cybersecurity</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🌐 5G &amp; Connectivity</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">📚 EdTech</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🏥 HealthTech</a>
+            <a href="#" class="bg-emerald-700 hover:bg-emerald-600 border border-emerald-600 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors duration-200">🪙 Crypto &amp; Web3</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RECENT POSTS + SIDEBAR ===== -->
+      <section class="py-16 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+          <!-- Recent posts list -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center justify-between mb-8">
+              <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Recent Posts</h2>
+              <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                All posts <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+
+            <div class="space-y-5">
+
+              <!-- Post 1 -->
+              <article class="card-hover flex gap-5 bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
+                <div class="w-24 h-24 md:w-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&q=80" alt="5G Africa" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">5G &amp; Connectivity</span>
+                    <h3 class="text-slate-900 font-bold text-sm md:text-base leading-snug mb-1 hover:text-emerald-700 transition-colors cursor-pointer">
+                      Africa's 5G Revolution: Which Countries Are Leading the Race?
+                    </h3>
+                    <p class="text-slate-400 text-xs leading-relaxed hidden sm:line-clamp-2">
+                      South Africa, Nigeria, and Kenya are racing to build 5G infrastructure — but the real winners may be the startups building on top of it.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>May 3, 2026</p>
+                    <span class="text-slate-200 hidden sm:inline">&middot;</span>
+                    <p class="text-slate-400 text-xs hidden sm:block"><i class="fa-regular fa-clock mr-1"></i>4 min read</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 2 -->
+              <article class="card-hover flex gap-5 bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
+                <div class="w-24 h-24 md:w-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" alt="African Startups Funding" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Startups</span>
+                    <h3 class="text-slate-900 font-bold text-sm md:text-base leading-snug mb-1 hover:text-emerald-700 transition-colors cursor-pointer">
+                      African Startups Raised $3.2B in Q1 2026 — Who Got the Biggest Cheques?
+                    </h3>
+                    <p class="text-slate-400 text-xs leading-relaxed hidden sm:line-clamp-2">
+                      Fintech and healthtech dominated the first quarter as investors continue to bet big on Africa's digital economy.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 30, 2026</p>
+                    <span class="text-slate-200 hidden sm:inline">&middot;</span>
+                    <p class="text-slate-400 text-xs hidden sm:block"><i class="fa-regular fa-clock mr-1"></i>5 min read</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article class="card-hover flex gap-5 bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
+                <div class="w-24 h-24 md:w-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&q=80" alt="EdTech Africa" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">EdTech</span>
+                    <h3 class="text-slate-900 font-bold text-sm md:text-base leading-snug mb-1 hover:text-emerald-700 transition-colors cursor-pointer">
+                      Andela, uLesson, Moringa: How EdTech is Closing Africa's Skills Gap
+                    </h3>
+                    <p class="text-slate-400 text-xs leading-relaxed hidden sm:line-clamp-2">
+                      With millions of young Africans entering the workforce annually, edtech platforms are racing to provide job-ready digital skills at scale.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 25, 2026</p>
+                    <span class="text-slate-200 hidden sm:inline">&middot;</span>
+                    <p class="text-slate-400 text-xs hidden sm:block"><i class="fa-regular fa-clock mr-1"></i>6 min read</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 4 -->
+              <article class="card-hover flex gap-5 bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
+                <div class="w-24 h-24 md:w-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1509395062183-a6ef3bca37f3?w=300&q=80" alt="Solar Tech Africa" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">CleanTech</span>
+                    <h3 class="text-slate-900 font-bold text-sm md:text-base leading-snug mb-1 hover:text-emerald-700 transition-colors cursor-pointer">
+                      Off-Grid Solar is Lighting Up Rural Africa — and Disrupting Big Energy
+                    </h3>
+                    <p class="text-slate-400 text-xs leading-relaxed hidden sm:line-clamp-2">
+                      Pay-as-you-go solar companies like d.light and BBOXX are bringing electricity to communities the grid never reached.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 18, 2026</p>
+                    <span class="text-slate-200 hidden sm:inline">&middot;</span>
+                    <p class="text-slate-400 text-xs hidden sm:block"><i class="fa-regular fa-clock mr-1"></i>5 min read</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 5 -->
+              <article class="card-hover flex gap-5 bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
+                <div class="w-24 h-24 md:w-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&q=80" alt="Cybersecurity Africa" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <span class="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Cybersecurity</span>
+                    <h3 class="text-slate-900 font-bold text-sm md:text-base leading-snug mb-1 hover:text-emerald-700 transition-colors cursor-pointer">
+                      Cyber Threats in Africa: Why Businesses Must Prioritise Digital Defence Now
+                    </h3>
+                    <p class="text-slate-400 text-xs leading-relaxed hidden sm:line-clamp-2">
+                      As Africa's digital economy grows, so does its attack surface. Experts warn that many organisations are dangerously under-prepared.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2">
+                    <p class="text-slate-400 text-xs"><i class="fa-regular fa-calendar mr-1"></i>Apr 12, 2026</p>
+                    <span class="text-slate-200 hidden sm:inline">&middot;</span>
+                    <p class="text-slate-400 text-xs hidden sm:block"><i class="fa-regular fa-clock mr-1"></i>7 min read</p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="space-y-8">
+
+            <!-- Search -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-bold text-slate-900 mb-4">Search</h3>
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Search articles…"
+                  class="flex-1 border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                />
+                <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg transition-colors">
+                  <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Trending now -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-bold text-slate-900 mb-5 flex items-center gap-2">
+                <span class="w-1 h-5 bg-amber-400 rounded-full inline-block"></span>
+                Trending Now
+              </h3>
+              <ol class="space-y-4">
+                <li class="flex gap-3 items-start">
+                  <span class="text-2xl font-extrabold text-slate-100 leading-none flex-shrink-0 w-7">01</span>
+                  <a href="#" class="text-slate-700 hover:text-emerald-700 text-sm font-medium leading-snug transition-colors">Flutterwave Launches Pan-African Payment Infrastructure 2.0</a>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-2xl font-extrabold text-slate-100 leading-none flex-shrink-0 w-7">02</span>
+                  <a href="#" class="text-slate-700 hover:text-emerald-700 text-sm font-medium leading-snug transition-colors">Kenya Becomes First African Country to Regulate AI</a>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-2xl font-extrabold text-slate-100 leading-none flex-shrink-0 w-7">03</span>
+                  <a href="#" class="text-slate-700 hover:text-emerald-700 text-sm font-medium leading-snug transition-colors">Accra Rises as West Africa's New Tech Investment Destination</a>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-2xl font-extrabold text-slate-100 leading-none flex-shrink-0 w-7">04</span>
+                  <a href="#" class="text-slate-700 hover:text-emerald-700 text-sm font-medium leading-snug transition-colors">Zipline Drones Now Delivering Medicine in 8 African Countries</a>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Popular tags -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span class="w-1 h-5 bg-emerald-500 rounded-full inline-block"></span>
+                Popular Tags
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Fintech</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#AI</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Lagos</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Startups</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Nairobi</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Mobile</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#CleanEnergy</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Web3</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#EdTech</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#Accra</a>
+                <a href="#" class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 text-slate-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors">#HealthTech</a>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </section>
+
+      <!-- ===== NEWSLETTER ===== -->
+      <section id="newsletter" class="py-20 px-6 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-teal-300/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+          <span class="inline-block bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">Newsletter</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+            Stay Ahead of Africa's<br />
+            <span class="text-amber-400">Tech Revolution</span>
+          </h2>
+          <p class="text-emerald-200 text-base leading-relaxed mb-10">
+            Get the best African tech stories, startup funding news, and innovation insights delivered to your inbox every week. No spam, ever.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" novalidate>
+            <input
+              type="text"
+              placeholder="Your first name"
+              class="flex-1 bg-white/10 border border-white/20 text-white placeholder-emerald-300 rounded-full px-5 py-3 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+            />
+            <input
+              type="email"
+              placeholder="your@email.com"
+              class="flex-1 bg-white/10 border border-white/20 text-white placeholder-emerald-300 rounded-full px-5 py-3 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+            />
+            <button
+              type="submit"
+              class="bg-amber-400 hover:bg-amber-300 text-emerald-900 font-bold text-sm px-7 py-3 rounded-full transition-colors duration-200 whitespace-nowrap"
+            >
+              Subscribe Free
+            </button>
+          </form>
+          <p class="text-emerald-400 text-xs mt-5">
+            <i class="fa-solid fa-lock mr-1"></i>
+            Join 24,000+ readers across Africa. Unsubscribe anytime.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-slate-900 text-slate-400 pt-14 pb-8 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+          <!-- Brand + social -->
+          <div class="sm:col-span-2 lg:col-span-1">
+            <a href="#" class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-amber-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-bolt text-emerald-900 text-lg"></i>
+              </div>
+              <div class="leading-tight">
+                <span class="text-white font-extrabold text-lg block leading-none">Africa Tech</span>
+                <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">Infos</span>
+              </div>
+            </a>
+            <p class="text-sm leading-relaxed mb-6">
+              Your trusted source for African technology news, startup stories, and digital innovation insights.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <a href="#" aria-label="Facebook" class="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+              <a href="#" aria-label="X / Twitter" class="w-9 h-9 bg-slate-800 hover:bg-slate-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <i class="fa-brands fa-x-twitter text-sm"></i>
+              </a>
+              <a href="#" aria-label="Instagram" class="w-9 h-9 bg-slate-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+              <a href="#" aria-label="Threads" class="w-9 h-9 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-colors duration-200">
+                <i class="fa-brands fa-threads text-sm"></i>
+              </a>
+              <a href="#" aria-label="TikTok" class="w-9 h-9 bg-slate-800 hover:bg-black rounded-lg flex items-center justify-center transition-colors duration-200">
+                <i class="fa-brands fa-tiktok text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Topics -->
+          <div>
+            <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Topics</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Artificial Intelligence</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Fintech &amp; Payments</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Startups &amp; Funding</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">CleanTech</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Cybersecurity</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Mobile &amp; Apps</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Company</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Advertise</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Write for Us</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Legal</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Terms of Use</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Cookie Policy</a></li>
+              <li><a href="#" class="hover:text-emerald-400 text-sm transition-colors">Disclaimer</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-slate-500 text-sm text-center sm:text-left">
+            &copy; 2026 Africa Tech Infos. All rights reserved.
+          </p>
+          <p class="text-slate-500 text-sm">
+            Made with <span class="text-amber-400">&hearts;</span> By Dave DIB.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+  </body>
+</html>
